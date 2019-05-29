@@ -1,0 +1,5 @@
+Total months included in the dataset are 86
+Net total profit/loss over the entire period is 38382578.0
+The average changes in profit/loss over the entire period is 446309.0465116279
+The max increase in profits was in Feb-20121170593.0
+The max decrease in profits was in Sep-2013-1196225.0
