@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Current Conditions On Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape</a></p>
+    </div>
+
+    <div class="row" id="mars-latest_news">
+      <div class="col-md-12">
+        <h2 class="heading">Latest Mars News</h2>
+        <p>New Title: {{ mars_info.news_title }}</p><br>
+        <p>New Description: {{ mars_info.news_p }}</p><br> 
+      </div>
+    </div>
+    
+    <div class = "row" id="featured_image and data">
+      <div class="col-md-7">
+          <h2 class="heading">Featured Mars Image</h2>
+          <img src = {{mars_info.featured_image_url}} width=500px>
+      </div>
+
+      <div class="col-md-4">
+        <div class = "row" id="weather"> 
+            <div class="col-md-12">
+                <h2 class="heading">Current Weather on Mars</h2>
+                <p><small>{{mars_info.mars_weather}}</small></p>
+            </div>
+        </div>
+        <div class = "row" id="facts"> 
+          <div class="col-md-12">
+              <h2 class="heading">Mars Facts</h2>
+              <table border="1" class="dataframe">
+                <thead>
+                  <tr style="text-align: right;">
+                    <th></th>
+                    <th>Parameters</th>
+                    <th>Values</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>0</th>
+                    <td>Equatorial Diameter:</td>
+                    <td>6,792 km</td>
+                  </tr>
+                  <tr>
+                    <th>1</th>
+                    <td>Polar Diameter:</td>
+                    <td>6,752 km</td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>Mass:</td>
+                    <td>6.39 � 10^23 kg (0.11 Earths)</td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>Moons:</td>
+                    <td>2 (Phobos &amp; Deimos)</td>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <td>Orbit Distance:</td>
+                    <td>227,943,824 km (1.38 AU)</td>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <td>Orbit Period:</td>
+                    <td>687 days (1.9 years)</td>
+                  </tr>
+                  <tr>
+                    <th>6</th>
+                    <td>Surface Temperature:</td>
+                    <td>-87 to -5 �C</td>
+                  </tr>
+                  <tr>
+                    <th>7</th>
+                    <td>First Record:</td>
+                    <td>2nd millennium BC</td>
+                  </tr>
+                  <tr>
+                    <th>8</th>
+                    <td>Recorded By:</td>
+                    <td>Egyptian astronomers</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row" id="hemisphere_images">
+    <div class="col-md-6">
+      <h2 class="heading">{{mars_info.hemi1_title}}</h2>>
+      <img src = {{mars_info.hemi1_url}} width=500px>
+    </div>
+
+      <div class="col-md-6">
+        <h2 class="heading">{{mars_info.hemi2_title}}</h2>>
+        <img src = {{mars_info.hemi2_url}} width=500px>
+      </div>
+  </div>
+
+  <div class="row" id="hemisphere_images">
+    <div class="col-md-6">
+      <h2 class="heading">{{mars_info.hemi3_title}}</h2>>
+      <img src = {{mars_info.hemi3_url}} width=500px>
+    </div>
+
+      <div class="col-md-6">
+        <h2 class="heading">{{mars_info.hemi4_title}}</h2>>
+        <img src = {{mars_info.hemi4_url}} width=500px>
+      </div>
+  </div>
+
+</div>
+</body>
+
+</html>
+
